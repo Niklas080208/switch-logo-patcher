@@ -1,0 +1,247 @@
+:root {
+  color-scheme: dark;
+  --bg: #0d0f14;
+  --card: #161a22;
+  --border: #262c38;
+  --border-strong: #39414f;
+  --text: #e8ebf0;
+  --text-dim: #9aa3b2;
+  --accent: #e60012;
+  --accent-hover: #ff1a2e;
+  --success: #3ecf6e;
+  --error: #ff5c5c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background: radial-gradient(1200px 600px at 50% -10%, #1a2030 0%, var(--bg) 60%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  padding: 48px 16px;
+}
+
+.brand-logo {
+  width: min(420px, 85vw);
+  height: auto;
+}
+
+.demo-gif {
+  width: 100%;
+  height: auto;
+}
+
+.card {
+  width: 100%;
+  max-width: 560px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+header h1 {
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--text-dim);
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+code {
+  background: #0d1017;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 1px 5px;
+  font-size: 0.85em;
+}
+
+.picker {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.picker-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.picker-label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.clear-btn {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 2px 4px;
+}
+
+.clear-btn:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
+
+.dropzone {
+  border: 1.5px dashed var(--border-strong);
+  border-radius: 12px;
+  padding: 24px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+  background: #11141b;
+}
+
+.dropzone:hover,
+.dropzone.drag-over {
+  border-color: var(--accent);
+  background: #151923;
+}
+
+.dropzone-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-dim);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.dropzone-empty svg {
+  opacity: 0.6;
+}
+
+.hint {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.preview {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.preview img {
+  width: 66px;
+  height: 75px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: repeating-conic-gradient(#1c212c 0% 25%, #11141b 0% 50%) 0 0 /
+    16px 16px;
+  border: 1px solid var(--border);
+}
+
+.preview-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.filename {
+  font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dimensions {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+
+.dimensions.ok {
+  color: var(--success);
+}
+
+.field-error {
+  margin: 0;
+  color: var(--error);
+  font-size: 0.85rem;
+}
+
+.generate-btn {
+  appearance: none;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--accent);
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.05s ease;
+}
+
+.generate-btn:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.generate-btn:active:not(:disabled) {
+  transform: scale(0.99);
+}
+
+.generate-btn:disabled {
+  background: #2a2f3a;
+  color: var(--text-dim);
+  cursor: not-allowed;
+}
+
+.status {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.status.error {
+  color: var(--error);
+}
+
+.status.success {
+  color: var(--success);
+}
+
+footer {
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  line-height: 1.7;
+}
+
+footer a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--accent-hover);
+}
