@@ -1,0 +1,7 @@
+services:
+  web:
+    build: ./web
+    container_name: switch-logo-patcher
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
