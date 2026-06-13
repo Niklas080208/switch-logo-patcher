@@ -2,8 +2,7 @@
 
 import { useCallback, useRef, useState } from "react";
 
-const LOGO_WIDTH = 308;
-const LOGO_HEIGHT = 350;
+import { LOGO_WIDTH, LOGO_HEIGHT, LATEST_COMPATIBLE_FIRMWARE } from "@/lib/patch-info";
 
 interface PickedImage {
   file: File;
@@ -254,6 +253,13 @@ export default function Home() {
           >
             friedkeenan/switch-logo-patcher
           </a>
+
+          <p className="compatibility">
+            <span className="compatibility-badge">
+              Kompatibel bis {LATEST_COMPATIBLE_FIRMWARE}
+            </span>
+          </p>
+
         </footer>
       </div>
     </main>

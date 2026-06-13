@@ -34,3 +34,4 @@ export const PATCH_INFO: Record<string, number> = {
 
 export const LOGO_WIDTH = 308;
 export const LOGO_HEIGHT = 350;
+export const LATEST_COMPATIBLE_FIRMWARE = "22.0.0";
